@@ -32,7 +32,7 @@ app.post('/task', async (req, res) => {
 });
 
 app.delete('/tasks/:id', async (req, res) => {
-    const id = req.params.id;
+    const id = Number.parseInt(req.params.id);
     await db.read();
     const taskIndex = db.data.tasks.findIndex(task => task.id === id);
     if (taskIndex === -1) {
