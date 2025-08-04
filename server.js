@@ -9,7 +9,7 @@ const port = 4000;
 app.use(cors())
 app.use(express.json());
 
-const adapter = new JSONFile("tasks.json")
+const adapter = new JSONFile("/mnt/data/data.json")
 const db = new Low(adapter, { tasks: [] })
 
 await db.read()

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "chmod +x init-data.sh && ./init-data.sh && node server.js",
     "dev": "nodemon server.js"
   },
   "author": "",
